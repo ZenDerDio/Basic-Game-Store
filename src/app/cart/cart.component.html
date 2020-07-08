@@ -1,0 +1,15 @@
+<div class="cart-container">
+  <h1 class="cart-container-header">Cart</h1>
+
+  <div class="cart-container-empty" *ngIf="!itemsInCart[0]">
+    Cart is empty
+  </div>
+
+  <div *ngFor="let item of itemsInCart">
+    <app-cart-item [item]="item"></app-cart-item>
+  </div>
+
+  <div class="cart-container-total">
+    Total price: {{totalPrice()}} {{totalAmount}}
+  </div>
+</div>

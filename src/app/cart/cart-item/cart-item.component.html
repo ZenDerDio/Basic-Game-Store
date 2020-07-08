@@ -1,0 +1,14 @@
+<div class="item-cart-container">
+  <div class="item-cart">
+    <div class="item-cart-preview">
+      <img class="item-cart-cover" src="{{item.cover}}" alt="game cover"/>
+    </div>
+    <div class="item-cart-info">
+      <h2>{{item.title}}</h2>
+      <h6>Price: {{item.price}} {{item.currency}}</h6>
+      <h6>Quantity: {{item.quantity}}</h6>
+      <h6>Total amount:{{(item.price * item.quantity)}} {{item.currency}}</h6>
+      <button class="item-cart-remove" (click)="this.removeItemFromCart(item)">Remove</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<header>
+  <h1 class="products-header">Products</h1>
+</header>
+<div class="products-container">
+
+  <div *ngFor="let item of items">
+    <app-product-tile [item]="item"></app-product-tile>
+  </div>
+
+</div>

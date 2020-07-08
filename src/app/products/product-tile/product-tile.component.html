@@ -1,0 +1,14 @@
+<div class="product-tile">
+  <img class="product-tile-cover" src="{{item.cover}}" alt="game cover"/>
+  <h2 class="product-tile-game-title">{{item.title}}</h2>
+  <div class="product-tile-info">
+    <div class="product-tile-price-wrapper">
+      <span class="product-tile-details">Price: {{item.price}} {{item.currency}}</span>
+      <span class="product-tile-details" *ngIf="item.availability">In Stock</span>
+      <span class="product-tile-details" *ngIf="!item.availability">Out of Stock</span>
+    </div>
+    <button class="product-tile-add-to-cart" [disabled]="!item.availability" (click)="this.addItemToCart()">
+      Add to Cart
+    </button>
+  </div>
+</div>
